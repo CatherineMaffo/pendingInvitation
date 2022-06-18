@@ -1,0 +1,83 @@
+*,::after,::before{
+    box-sizing: border-box;
+    margin:0,auto;
+    padding:0;
+}
+
+.container{
+    border: 1px solid;
+    padding:20px;
+    
+}
+
+.header>h3{
+    text-align: end;
+}
+
+.nav{
+    display:grid;
+}
+.nav>h3{
+    text-align: end;
+    grid-column: 10/12;
+}
+
+.main{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+
+.person{
+    background-color: rgb(247, 252, 252);
+    width:300px;
+    margin: 5px;
+    padding: 30px;
+    text-align: center;
+    position: relative;
+}
+
+.delete{
+    width:20px;
+    height: auto;
+    background-color: red;
+    border-radius: 100%;
+    text-align: center;
+    position: absolute;
+    top:10px;
+    right:10px;
+    pointer-events: visible;
+    cursor: pointer;
+}
+
+img{
+    border-radius: 100%;
+}
+
+.btn{
+    width:200px;
+    height: auto;
+    border-radius: 20px;
+    border-color: rgb(132, 7, 248);
+    background-color: white;
+    padding: 10px;
+    color: rgb(132, 7, 248);
+}
+
+.styling-people{
+  animation: animation 5s ease-in-out infinite 
+}
+
+.btn-toggle{
+background-image: linear-gradient( white 60%, grey);
+}
+
+@keyframes animation {
+    0%{transform: scale(0.3) rotate(360deg)}
+    25%{transform: translateX(-10px);
+        background-image: linear-gradient(green, red, yellow)}
+    50%{transform: translateX(-10px);
+        background:yellow;}
+    100%{
+    transform: scale(0.3) rotate(360deg);}
+    
+}
